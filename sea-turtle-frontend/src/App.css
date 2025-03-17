@@ -1,0 +1,130 @@
+/* 引入 Google 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background-color: #d1e6f0; /* 更淡的海藍色背景 */
+  font-family: 'Poppins', sans-serif; /* 使用 Poppins 字體 */
+  color: #333;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* 讓內容居中 */
+  align-items: flex-start;  /* 內容從頂部對齊 */
+  min-height: 100vh;        /* 讓內容滿足整個頁面 */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-weight: bold; /* 使頁面字體都變成粗體 */
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%; /* 使兩側能夠佔滿畫面 */
+  gap: 60px;   /* 增加兩側區域的間隔 */
+}
+
+.left {
+  width: 50%; /* 左邊區域佔畫面 50% */
+  text-align: left; /* 保證文字靠左 */
+}
+
+.right {
+  width: 50%; /* 右邊區域佔畫面 50% */
+  text-align: left; /* 保證文字靠左 */
+}
+
+h1 {
+  color: #004e7c; /* 深藍色 */
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #0078a3; /* 深藍色 */
+}
+
+h3 {
+  color: #004e7c; /* 深藍色 */
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #85bbd2; /* 更淡的藍色 */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80%;  /* 讓上傳按鈕更大 */
+}
+
+input[type="file"]:hover {
+  background-color: #e4f1f9; /* 淺藍色的 hover 效果 */
+}
+
+button {
+  background-color: #85bbd2; /* 更淡的藍色 */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #5aa8b6; /* 更淡的藍色 */
+  transform: scale(1.05); /* 按鈕擴大效果 */
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;  /* 保持圖片的自適應大小 */
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #ffffff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #333;
+  width: 100%;
+}
+
+li:nth-child(odd) {
+  background-color: #f1f9ff; /* 淺藍色的項目 */
+}
+
+/* 讓 '圖片上傳功能' 和 '預測結果' 更加顯眼 */
+h1, h2, h3 {
+  font-weight: bold; /* 確保這些標題是粗體 */
+}
+
+h1, h2, h3, button, input[type="file"] {
+  color: #004e7c; /* 深藍色 */
+}
+
+/* 螢幕較小時調整左右區域的寬度 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 當螢幕寬度小於768px時，將左右區域換為上下排列 */
+  }
+  .left, .right {
+    width: 100%;
+  }
+}
